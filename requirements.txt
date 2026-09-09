@@ -1,0 +1,3 @@
+# AstrBot will automatically pip install these packages on plugin installation.
+# imageio-ffmpeg provides ffmpeg binary, so no system ffmpeg installation is required.
+imageio-ffmpeg>=0.4.9

@@ -1,0 +1,8 @@
+name: "astrbot-plugin-163Music"
+display_name: "网易云音乐点歌插件"
+desc: "AstrBot 网易云音乐点歌插件"
+author: "XiaoXin"
+repo: "https://github.com/xiaoxin-qaq/astrbot-plugin-163Music"
+social_link: "https://github.com/xiaoxin-qaq"
+version: "1.0.0"
+config: true

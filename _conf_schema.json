@@ -1,0 +1,26 @@
+{
+  "api_url": {
+    "type": "string",
+    "label": "网易云 API 地址",
+    "description": "自行部署的 NeteaseCloudMusicApi",
+    "default": ""
+  },
+  "quality": {
+    "type": "string",
+    "label": "优先音质",
+    "description": "优先获取的音质（lossless / exhigh / higher / standard）。如果不可用，插件会自动尝试更低的音质。",
+    "default": "lossless"
+  },
+  "search_limit": {
+    "type": "int",
+    "label": "搜索结果数量",
+    "description": "每次搜索时，向用户展示的歌曲选项数量。",
+    "default": 10
+  },
+  "cookie": {
+    "type": "text",
+    "label": "网易云 Cookie",
+    "description": "网易云音乐Cookie可直接使用/login指令进行抓取",
+    "default": ""
+  }
+}
