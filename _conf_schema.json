@@ -8,14 +8,26 @@
   "quality": {
     "type": "string",
     "label": "优先音质",
-    "description": "优先获取的音质（lossless / exhigh / higher / standard）。如果不可用，插件会自动尝试更低的音质。",
-    "default": "lossless"
+    "description": "点歌优先获取的音质：jymaster(超清母带) / dolby(杜比全景声) / vivid(臻音全景声) / sky(沉浸环绕声) / jyeffect(高清环绕声) / hires(Hi-Res) / lossless(无损) / exhigh(极高) / higher(较高) / standard(标准)。插件会读取账号VIP等级：无VIP时自动退回当前账号可获取的最高音质。",
+    "default": "jymaster"
   },
   "search_limit": {
     "type": "int",
     "label": "搜索结果数量",
-    "description": "每次搜索时，向用户展示的歌曲选项数量。",
+    "description": "搜索歌曲/歌手时抓取的数量；实际抓取不低于「每页显示数量」的3倍，确保能翻页，配置更大时按配置抓取。",
+    "default": 30
+  },
+  "page_size": {
+    "type": "int",
+    "label": "每页显示数量",
+    "description": "点歌与下载的歌曲列表每页显示的歌曲数量（列表使用全局编号，翻页指令：p2 或 /p2）。",
     "default": 10
+  },
+  "max_fetch_songs": {
+    "type": "int",
+    "label": "最大抓取歌曲数",
+    "description": "下载歌单时最多抓取的歌曲数量，上限 1000 首。",
+    "default": 1000
   },
   "cookie": {
     "type": "text",

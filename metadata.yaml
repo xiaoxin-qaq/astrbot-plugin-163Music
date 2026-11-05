@@ -3,5 +3,5 @@ display_name: "网易云音乐点歌插件"
 desc: "网易云音乐点歌插件"
 author: "xiaoxin"
 repo: "https://github.com/xiaoxin-qaq/astrbot-plugin-163Music"
-version: "1.2.0"
+version: "1.5.0"
 config: true
