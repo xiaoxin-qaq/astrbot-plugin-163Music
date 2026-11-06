@@ -17,6 +17,7 @@ except ImportError:
     imageio_ffmpeg = None
 
 from astrbot.api import star, logger
+from astrbot.api.star import StarTools
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.core.message.message_event_result import MessageChain
 from astrbot.api.message_components import Plain, Image, Record, File
@@ -471,7 +472,11 @@ class Main(star.Star):
 
         self._qr_task: Optional[asyncio.Task] = None
         self._qr_phase: str = "idle"
-        self._cookie_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "netease_login.json")
+
+        # 持久化数据统一放在 data/plugin_data/<plugin_name>，避免插件更新时丢失。
+        plugin_name = getattr(self, "name", None) or "astrbot_plugin_163music"
+        self._data_dir = StarTools.get_data_dir(plugin_name)
+        self._cookie_path = str(self._data_dir / "netease_login.json")
         self._load_saved_cookie()
 
     # ---------- 配置读取（统一来自 _conf_schema.json 对应的配置项） ----------
